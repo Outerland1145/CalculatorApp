@@ -29,16 +29,16 @@ namespace CalculatorApp
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.Btn_1 = new System.Windows.Forms.Button();
+            this.Btn_2 = new System.Windows.Forms.Button();
+            this.Btn_3 = new System.Windows.Forms.Button();
+            this.Btn_4 = new System.Windows.Forms.Button();
+            this.Btn_5 = new System.Windows.Forms.Button();
+            this.Btn_6 = new System.Windows.Forms.Button();
+            this.Btn_7 = new System.Windows.Forms.Button();
+            this.Btn_8 = new System.Windows.Forms.Button();
+            this.Btn_9 = new System.Windows.Forms.Button();
+            this.Btn_0 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
@@ -46,113 +46,123 @@ namespace CalculatorApp
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxBox_Calculator = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // button1
+            // Btn_1
             // 
-            this.button1.Font = new System.Drawing.Font("新細明體", 36F);
-            this.button1.Location = new System.Drawing.Point(123, 91);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 53);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Btn_1.Font = new System.Drawing.Font("新細明體", 36F);
+            this.Btn_1.Location = new System.Drawing.Point(123, 146);
+            this.Btn_1.Name = "Btn_1";
+            this.Btn_1.Size = new System.Drawing.Size(92, 53);
+            this.Btn_1.TabIndex = 0;
+            this.Btn_1.Text = "1";
+            this.Btn_1.UseVisualStyleBackColor = true;
+            this.Btn_1.Click += new System.EventHandler(this.Btn_1_Click);
             // 
-            // button2
+            // Btn_2
             // 
-            this.button2.Font = new System.Drawing.Font("新細明體", 36F);
-            this.button2.Location = new System.Drawing.Point(217, 91);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 53);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Btn_2.Font = new System.Drawing.Font("新細明體", 36F);
+            this.Btn_2.Location = new System.Drawing.Point(217, 146);
+            this.Btn_2.Name = "Btn_2";
+            this.Btn_2.Size = new System.Drawing.Size(92, 53);
+            this.Btn_2.TabIndex = 1;
+            this.Btn_2.Text = "2";
+            this.Btn_2.UseVisualStyleBackColor = true;
+            this.Btn_2.Click += new System.EventHandler(this.Btn_2_Click);
             // 
-            // button3
+            // Btn_3
             // 
-            this.button3.Font = new System.Drawing.Font("新細明體", 36F);
-            this.button3.Location = new System.Drawing.Point(311, 91);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(92, 53);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.Btn_3.Font = new System.Drawing.Font("新細明體", 36F);
+            this.Btn_3.Location = new System.Drawing.Point(311, 146);
+            this.Btn_3.Name = "Btn_3";
+            this.Btn_3.Size = new System.Drawing.Size(92, 53);
+            this.Btn_3.TabIndex = 2;
+            this.Btn_3.Text = "3";
+            this.Btn_3.UseVisualStyleBackColor = true;
+            this.Btn_3.Click += new System.EventHandler(this.Btn_3_Click);
             // 
-            // button4
+            // Btn_4
             // 
-            this.button4.Font = new System.Drawing.Font("新細明體", 36F);
-            this.button4.Location = new System.Drawing.Point(123, 146);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(92, 53);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.Btn_4.Font = new System.Drawing.Font("新細明體", 36F);
+            this.Btn_4.Location = new System.Drawing.Point(123, 201);
+            this.Btn_4.Name = "Btn_4";
+            this.Btn_4.Size = new System.Drawing.Size(92, 53);
+            this.Btn_4.TabIndex = 3;
+            this.Btn_4.Text = "4";
+            this.Btn_4.UseVisualStyleBackColor = true;
+            this.Btn_4.Click += new System.EventHandler(this.Btn_4_Click);
             // 
-            // button5
+            // Btn_5
             // 
-            this.button5.Font = new System.Drawing.Font("新細明體", 36F);
-            this.button5.Location = new System.Drawing.Point(217, 146);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(92, 53);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.Btn_5.Font = new System.Drawing.Font("新細明體", 36F);
+            this.Btn_5.Location = new System.Drawing.Point(217, 201);
+            this.Btn_5.Name = "Btn_5";
+            this.Btn_5.Size = new System.Drawing.Size(92, 53);
+            this.Btn_5.TabIndex = 4;
+            this.Btn_5.Text = "5";
+            this.Btn_5.UseVisualStyleBackColor = true;
+            this.Btn_5.Click += new System.EventHandler(this.Btn_5_Click);
             // 
-            // button6
+            // Btn_6
             // 
-            this.button6.Font = new System.Drawing.Font("新細明體", 36F);
-            this.button6.Location = new System.Drawing.Point(311, 146);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(92, 53);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.Btn_6.Font = new System.Drawing.Font("新細明體", 36F);
+            this.Btn_6.Location = new System.Drawing.Point(311, 201);
+            this.Btn_6.Name = "Btn_6";
+            this.Btn_6.Size = new System.Drawing.Size(92, 53);
+            this.Btn_6.TabIndex = 5;
+            this.Btn_6.Text = "6";
+            this.Btn_6.UseVisualStyleBackColor = true;
+            this.Btn_6.Click += new System.EventHandler(this.Btn_6_Click);
             // 
-            // button7
+            // Btn_7
             // 
-            this.button7.Font = new System.Drawing.Font("新細明體", 36F);
-            this.button7.Location = new System.Drawing.Point(123, 201);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(92, 53);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "7";
-            this.button7.UseVisualStyleBackColor = true;
+            this.Btn_7.Font = new System.Drawing.Font("新細明體", 36F);
+            this.Btn_7.Location = new System.Drawing.Point(123, 256);
+            this.Btn_7.Name = "Btn_7";
+            this.Btn_7.Size = new System.Drawing.Size(92, 53);
+            this.Btn_7.TabIndex = 6;
+            this.Btn_7.Text = "7";
+            this.Btn_7.UseVisualStyleBackColor = true;
+            this.Btn_7.Click += new System.EventHandler(this.Btn_7_Click);
             // 
-            // button8
+            // Btn_8
             // 
-            this.button8.Font = new System.Drawing.Font("新細明體", 36F);
-            this.button8.Location = new System.Drawing.Point(217, 201);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(92, 53);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "8";
-            this.button8.UseVisualStyleBackColor = true;
+            this.Btn_8.Font = new System.Drawing.Font("新細明體", 36F);
+            this.Btn_8.Location = new System.Drawing.Point(217, 256);
+            this.Btn_8.Name = "Btn_8";
+            this.Btn_8.Size = new System.Drawing.Size(92, 53);
+            this.Btn_8.TabIndex = 7;
+            this.Btn_8.Text = "8";
+            this.Btn_8.UseVisualStyleBackColor = true;
+            this.Btn_8.Click += new System.EventHandler(this.Btn_8_Click);
             // 
-            // button9
+            // Btn_9
             // 
-            this.button9.Font = new System.Drawing.Font("新細明體", 36F);
-            this.button9.Location = new System.Drawing.Point(311, 201);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(92, 53);
-            this.button9.TabIndex = 8;
-            this.button9.Text = "9";
-            this.button9.UseVisualStyleBackColor = true;
+            this.Btn_9.Font = new System.Drawing.Font("新細明體", 36F);
+            this.Btn_9.Location = new System.Drawing.Point(311, 256);
+            this.Btn_9.Name = "Btn_9";
+            this.Btn_9.Size = new System.Drawing.Size(92, 53);
+            this.Btn_9.TabIndex = 8;
+            this.Btn_9.Text = "9";
+            this.Btn_9.UseVisualStyleBackColor = true;
+            this.Btn_9.Click += new System.EventHandler(this.Btn_9_Click);
             // 
-            // button10
+            // Btn_0
             // 
-            this.button10.Font = new System.Drawing.Font("新細明體", 36F);
-            this.button10.Location = new System.Drawing.Point(217, 256);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(92, 53);
-            this.button10.TabIndex = 9;
-            this.button10.Text = "0";
-            this.button10.UseVisualStyleBackColor = true;
+            this.Btn_0.Font = new System.Drawing.Font("新細明體", 36F);
+            this.Btn_0.Location = new System.Drawing.Point(217, 311);
+            this.Btn_0.Name = "Btn_0";
+            this.Btn_0.Size = new System.Drawing.Size(92, 53);
+            this.Btn_0.TabIndex = 9;
+            this.Btn_0.Text = "0";
+            this.Btn_0.UseVisualStyleBackColor = true;
+            this.Btn_0.Click += new System.EventHandler(this.Btn_0_Click);
             // 
             // button11
             // 
             this.button11.Font = new System.Drawing.Font("新細明體", 36F);
-            this.button11.Location = new System.Drawing.Point(311, 256);
+            this.button11.Location = new System.Drawing.Point(311, 311);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(92, 53);
             this.button11.TabIndex = 10;
@@ -162,7 +172,7 @@ namespace CalculatorApp
             // button12
             // 
             this.button12.Font = new System.Drawing.Font("新細明體", 36F);
-            this.button12.Location = new System.Drawing.Point(123, 256);
+            this.button12.Location = new System.Drawing.Point(123, 311);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(92, 53);
             this.button12.TabIndex = 11;
@@ -172,7 +182,7 @@ namespace CalculatorApp
             // button13
             // 
             this.button13.Font = new System.Drawing.Font("新細明體", 36F);
-            this.button13.Location = new System.Drawing.Point(409, 91);
+            this.button13.Location = new System.Drawing.Point(409, 146);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(92, 53);
             this.button13.TabIndex = 12;
@@ -182,7 +192,7 @@ namespace CalculatorApp
             // button14
             // 
             this.button14.Font = new System.Drawing.Font("新細明體", 36F);
-            this.button14.Location = new System.Drawing.Point(409, 146);
+            this.button14.Location = new System.Drawing.Point(409, 201);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(92, 53);
             this.button14.TabIndex = 13;
@@ -192,7 +202,7 @@ namespace CalculatorApp
             // button15
             // 
             this.button15.Font = new System.Drawing.Font("新細明體", 36F);
-            this.button15.Location = new System.Drawing.Point(409, 201);
+            this.button15.Location = new System.Drawing.Point(409, 256);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(92, 53);
             this.button15.TabIndex = 14;
@@ -202,7 +212,7 @@ namespace CalculatorApp
             // button16
             // 
             this.button16.Font = new System.Drawing.Font("新細明體", 36F);
-            this.button16.Location = new System.Drawing.Point(409, 256);
+            this.button16.Location = new System.Drawing.Point(409, 311);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(92, 53);
             this.button16.TabIndex = 15;
@@ -212,27 +222,27 @@ namespace CalculatorApp
             // button17
             // 
             this.button17.Font = new System.Drawing.Font("新細明體", 36F);
-            this.button17.Location = new System.Drawing.Point(25, 91);
+            this.button17.Location = new System.Drawing.Point(25, 146);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(92, 218);
             this.button17.TabIndex = 16;
             this.button17.Text = "AC";
             this.button17.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // TxBox_Calculator
             // 
-            this.textBox1.Font = new System.Drawing.Font("新細明體", 36F);
-            this.textBox1.Location = new System.Drawing.Point(25, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(476, 65);
-            this.textBox1.TabIndex = 17;
+            this.TxBox_Calculator.Font = new System.Drawing.Font("新細明體", 36F);
+            this.TxBox_Calculator.Location = new System.Drawing.Point(25, 75);
+            this.TxBox_Calculator.Name = "TxBox_Calculator";
+            this.TxBox_Calculator.Size = new System.Drawing.Size(476, 65);
+            this.TxBox_Calculator.TabIndex = 17;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(529, 337);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(529, 389);
+            this.Controls.Add(this.TxBox_Calculator);
             this.Controls.Add(this.button17);
             this.Controls.Add(this.button16);
             this.Controls.Add(this.button15);
@@ -240,16 +250,16 @@ namespace CalculatorApp
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Btn_0);
+            this.Controls.Add(this.Btn_9);
+            this.Controls.Add(this.Btn_8);
+            this.Controls.Add(this.Btn_7);
+            this.Controls.Add(this.Btn_6);
+            this.Controls.Add(this.Btn_5);
+            this.Controls.Add(this.Btn_4);
+            this.Controls.Add(this.Btn_3);
+            this.Controls.Add(this.Btn_2);
+            this.Controls.Add(this.Btn_1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -259,16 +269,16 @@ namespace CalculatorApp
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button Btn_1;
+        private System.Windows.Forms.Button Btn_2;
+        private System.Windows.Forms.Button Btn_3;
+        private System.Windows.Forms.Button Btn_4;
+        private System.Windows.Forms.Button Btn_5;
+        private System.Windows.Forms.Button Btn_6;
+        private System.Windows.Forms.Button Btn_7;
+        private System.Windows.Forms.Button Btn_8;
+        private System.Windows.Forms.Button Btn_9;
+        private System.Windows.Forms.Button Btn_0;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
@@ -276,7 +286,7 @@ namespace CalculatorApp
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxBox_Calculator;
     }
 }
 

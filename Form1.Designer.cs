@@ -41,12 +41,13 @@ namespace CalculatorApp
             this.Btn_0 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
+            this.Add_button = new System.Windows.Forms.Button();
+            this.Reduce_button = new System.Windows.Forms.Button();
+            this.Multiply_button = new System.Windows.Forms.Button();
+            this.Divide_button = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.TxBox_Calculator = new System.Windows.Forms.TextBox();
+            this.NumberText = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Btn_1
@@ -179,45 +180,49 @@ namespace CalculatorApp
             this.button12.Text = "=";
             this.button12.UseVisualStyleBackColor = true;
             // 
-            // button13
+            // Add_button
             // 
-            this.button13.Font = new System.Drawing.Font("新細明體", 36F);
-            this.button13.Location = new System.Drawing.Point(409, 146);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(92, 53);
-            this.button13.TabIndex = 12;
-            this.button13.Text = "+";
-            this.button13.UseVisualStyleBackColor = true;
+            this.Add_button.Font = new System.Drawing.Font("新細明體", 36F);
+            this.Add_button.Location = new System.Drawing.Point(409, 146);
+            this.Add_button.Name = "Add_button";
+            this.Add_button.Size = new System.Drawing.Size(92, 53);
+            this.Add_button.TabIndex = 12;
+            this.Add_button.Text = "+";
+            this.Add_button.UseVisualStyleBackColor = true;
+            this.Add_button.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Add_button_MouseClick);
             // 
-            // button14
+            // Reduce_button
             // 
-            this.button14.Font = new System.Drawing.Font("新細明體", 36F);
-            this.button14.Location = new System.Drawing.Point(409, 201);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(92, 53);
-            this.button14.TabIndex = 13;
-            this.button14.Text = "-";
-            this.button14.UseVisualStyleBackColor = true;
+            this.Reduce_button.Font = new System.Drawing.Font("新細明體", 36F);
+            this.Reduce_button.Location = new System.Drawing.Point(409, 201);
+            this.Reduce_button.Name = "Reduce_button";
+            this.Reduce_button.Size = new System.Drawing.Size(92, 53);
+            this.Reduce_button.TabIndex = 13;
+            this.Reduce_button.Text = "-";
+            this.Reduce_button.UseVisualStyleBackColor = true;
+            this.Reduce_button.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Reduce_button_MouseClick);
             // 
-            // button15
+            // Multiply_button
             // 
-            this.button15.Font = new System.Drawing.Font("新細明體", 36F);
-            this.button15.Location = new System.Drawing.Point(409, 256);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(92, 53);
-            this.button15.TabIndex = 14;
-            this.button15.Text = "*";
-            this.button15.UseVisualStyleBackColor = true;
+            this.Multiply_button.Font = new System.Drawing.Font("新細明體", 36F);
+            this.Multiply_button.Location = new System.Drawing.Point(409, 256);
+            this.Multiply_button.Name = "Multiply_button";
+            this.Multiply_button.Size = new System.Drawing.Size(92, 53);
+            this.Multiply_button.TabIndex = 14;
+            this.Multiply_button.Text = "*";
+            this.Multiply_button.UseVisualStyleBackColor = true;
+            this.Multiply_button.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Multiply_button_MouseClick);
             // 
-            // button16
+            // Divide_button
             // 
-            this.button16.Font = new System.Drawing.Font("新細明體", 36F);
-            this.button16.Location = new System.Drawing.Point(409, 311);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(92, 53);
-            this.button16.TabIndex = 15;
-            this.button16.Text = "/";
-            this.button16.UseVisualStyleBackColor = true;
+            this.Divide_button.Font = new System.Drawing.Font("新細明體", 36F);
+            this.Divide_button.Location = new System.Drawing.Point(409, 311);
+            this.Divide_button.Name = "Divide_button";
+            this.Divide_button.Size = new System.Drawing.Size(92, 53);
+            this.Divide_button.TabIndex = 15;
+            this.Divide_button.Text = "/";
+            this.Divide_button.UseVisualStyleBackColor = true;
+            this.Divide_button.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Divide_button_MouseClick);
             // 
             // button17
             // 
@@ -237,17 +242,28 @@ namespace CalculatorApp
             this.TxBox_Calculator.Size = new System.Drawing.Size(476, 65);
             this.TxBox_Calculator.TabIndex = 17;
             // 
+            // NumberText
+            // 
+            this.NumberText.AutoSize = true;
+            this.NumberText.Font = new System.Drawing.Font("新細明體", 24F);
+            this.NumberText.Location = new System.Drawing.Point(19, 40);
+            this.NumberText.Name = "NumberText";
+            this.NumberText.Size = new System.Drawing.Size(125, 32);
+            this.NumberText.TabIndex = 18;
+            this.NumberText.Text = "Numbers";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(529, 389);
+            this.Controls.Add(this.NumberText);
             this.Controls.Add(this.TxBox_Calculator);
             this.Controls.Add(this.button17);
-            this.Controls.Add(this.button16);
-            this.Controls.Add(this.button15);
-            this.Controls.Add(this.button14);
-            this.Controls.Add(this.button13);
+            this.Controls.Add(this.Divide_button);
+            this.Controls.Add(this.Multiply_button);
+            this.Controls.Add(this.Reduce_button);
+            this.Controls.Add(this.Add_button);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.Btn_0);
@@ -281,12 +297,13 @@ namespace CalculatorApp
         private System.Windows.Forms.Button Btn_0;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button Add_button;
+        private System.Windows.Forms.Button Reduce_button;
+        private System.Windows.Forms.Button Multiply_button;
+        private System.Windows.Forms.Button Divide_button;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.TextBox TxBox_Calculator;
+        private System.Windows.Forms.Label NumberText;
     }
 }
 

@@ -39,8 +39,8 @@ namespace CalculatorApp
             this.Btn_8 = new System.Windows.Forms.Button();
             this.Btn_9 = new System.Windows.Forms.Button();
             this.Btn_0 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
+            this.Dot_button = new System.Windows.Forms.Button();
+            this.Equal_Button = new System.Windows.Forms.Button();
             this.Add_button = new System.Windows.Forms.Button();
             this.Reduce_button = new System.Windows.Forms.Button();
             this.Multiply_button = new System.Windows.Forms.Button();
@@ -160,25 +160,27 @@ namespace CalculatorApp
             this.Btn_0.UseVisualStyleBackColor = true;
             this.Btn_0.Click += new System.EventHandler(this.Btn_0_Click);
             // 
-            // button11
+            // Dot_button
             // 
-            this.button11.Font = new System.Drawing.Font("新細明體", 36F);
-            this.button11.Location = new System.Drawing.Point(311, 311);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(92, 53);
-            this.button11.TabIndex = 10;
-            this.button11.Text = ".";
-            this.button11.UseVisualStyleBackColor = true;
+            this.Dot_button.Font = new System.Drawing.Font("新細明體", 36F);
+            this.Dot_button.Location = new System.Drawing.Point(311, 311);
+            this.Dot_button.Name = "Dot_button";
+            this.Dot_button.Size = new System.Drawing.Size(92, 53);
+            this.Dot_button.TabIndex = 10;
+            this.Dot_button.Text = ".";
+            this.Dot_button.UseVisualStyleBackColor = true;
+            this.Dot_button.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Dot_button_MouseClick);
             // 
-            // button12
+            // Equal_Button
             // 
-            this.button12.Font = new System.Drawing.Font("新細明體", 36F);
-            this.button12.Location = new System.Drawing.Point(123, 311);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(92, 53);
-            this.button12.TabIndex = 11;
-            this.button12.Text = "=";
-            this.button12.UseVisualStyleBackColor = true;
+            this.Equal_Button.Font = new System.Drawing.Font("新細明體", 36F);
+            this.Equal_Button.Location = new System.Drawing.Point(123, 311);
+            this.Equal_Button.Name = "Equal_Button";
+            this.Equal_Button.Size = new System.Drawing.Size(92, 53);
+            this.Equal_Button.TabIndex = 11;
+            this.Equal_Button.Text = "=";
+            this.Equal_Button.UseVisualStyleBackColor = true;
+            this.Equal_Button.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Equal_Button_MouseClick);
             // 
             // Add_button
             // 
@@ -264,8 +266,8 @@ namespace CalculatorApp
             this.Controls.Add(this.Multiply_button);
             this.Controls.Add(this.Reduce_button);
             this.Controls.Add(this.Add_button);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.button11);
+            this.Controls.Add(this.Equal_Button);
+            this.Controls.Add(this.Dot_button);
             this.Controls.Add(this.Btn_0);
             this.Controls.Add(this.Btn_9);
             this.Controls.Add(this.Btn_8);
@@ -295,8 +297,8 @@ namespace CalculatorApp
         private System.Windows.Forms.Button Btn_8;
         private System.Windows.Forms.Button Btn_9;
         private System.Windows.Forms.Button Btn_0;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button Dot_button;
+        private System.Windows.Forms.Button Equal_Button;
         private System.Windows.Forms.Button Add_button;
         private System.Windows.Forms.Button Reduce_button;
         private System.Windows.Forms.Button Multiply_button;

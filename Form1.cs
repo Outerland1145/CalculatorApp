@@ -16,6 +16,7 @@ namespace CalculatorApp
         double douOutput;
         double FirstNumber;
         double SecondNumber;
+        int operators;
         public Form1()
         {
             InitializeComponent();
@@ -114,30 +115,72 @@ namespace CalculatorApp
 
         private void Divide_button_MouseClick(object sender, MouseEventArgs e)
         {
-            if (double.TryParse(strInput, out douOutput) == true)
-            {
-                
-            }
+            FirstNumber = Convert.ToSingle(TxBox_Calculator.Text);
             NumberText.Text = TxBox_Calculator.Text + "/";
             TxBox_Calculator.Text = "";
+            operators = 4;
         }
 
         private void Multiply_button_MouseClick(object sender, MouseEventArgs e)
         {
+            FirstNumber = Convert.ToSingle(TxBox_Calculator.Text);
             NumberText.Text = TxBox_Calculator.Text + "*";
             TxBox_Calculator.Text = "";
+            operators = 3;
         }
 
         private void Reduce_button_MouseClick(object sender, MouseEventArgs e)
         {
+            FirstNumber = Convert.ToSingle(TxBox_Calculator.Text);
             NumberText.Text = TxBox_Calculator.Text + "-";
             TxBox_Calculator.Text = "";
+            operators = 2;
         }
 
         private void Add_button_MouseClick(object sender, MouseEventArgs e)
         {
+            FirstNumber = Convert.ToSingle(TxBox_Calculator.Text);
             NumberText.Text = TxBox_Calculator.Text + "+";
             TxBox_Calculator.Text = "";
+            operators = 1;
+
+
+        }
+
+        private void Equal_Button_MouseClick(object sender, MouseEventArgs e)
+        {
+            double finalResults = 0f;
+            SecondNumber = Convert.ToSingle(TxBox_Calculator.Text);
+            switch (operators)
+            {
+                case 1:
+                    finalResults = FirstNumber + SecondNumber;
+                    break;
+                case 2:
+                    finalResults = FirstNumber - SecondNumber;
+                    break;
+                case 3:
+                    finalResults = FirstNumber * SecondNumber;
+                    break;
+                case 4:
+                    finalResults = FirstNumber / SecondNumber;
+                    break;
+            }
+            TxBox_Calculator.Text = string.Format("{0:0.##########}", finalResults);
+            NumberText.Text = "";
+            FirstNumber = 0f;
+            SecondNumber = 0f;
+            operators = -1;
+
+        }
+
+        private void Dot_button_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (TxBox_Calculator.Text.IndexOf(".") == -1)
+            {
+                TxBox_Calculator.Text = TxBox_Calculator.Text + ".";
+            }
+                
         }
     }
 }

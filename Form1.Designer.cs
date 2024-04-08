@@ -45,9 +45,10 @@ namespace CalculatorApp
             this.Reduce_button = new System.Windows.Forms.Button();
             this.Multiply_button = new System.Windows.Forms.Button();
             this.Divide_button = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
+            this.AC_Btn = new System.Windows.Forms.Button();
             this.TxBox_Calculator = new System.Windows.Forms.TextBox();
             this.NumberText = new System.Windows.Forms.Label();
+            this.Percentage_Button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Btn_1
@@ -226,15 +227,16 @@ namespace CalculatorApp
             this.Divide_button.UseVisualStyleBackColor = true;
             this.Divide_button.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Divide_button_MouseClick);
             // 
-            // button17
+            // AC_Btn
             // 
-            this.button17.Font = new System.Drawing.Font("新細明體", 36F);
-            this.button17.Location = new System.Drawing.Point(25, 146);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(92, 218);
-            this.button17.TabIndex = 16;
-            this.button17.Text = "AC";
-            this.button17.UseVisualStyleBackColor = true;
+            this.AC_Btn.Font = new System.Drawing.Font("新細明體", 36F);
+            this.AC_Btn.Location = new System.Drawing.Point(25, 146);
+            this.AC_Btn.Name = "AC_Btn";
+            this.AC_Btn.Size = new System.Drawing.Size(92, 108);
+            this.AC_Btn.TabIndex = 16;
+            this.AC_Btn.Text = "AC";
+            this.AC_Btn.UseVisualStyleBackColor = true;
+            this.AC_Btn.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AC_Btn_MouseClick);
             // 
             // TxBox_Calculator
             // 
@@ -254,14 +256,26 @@ namespace CalculatorApp
             this.NumberText.TabIndex = 18;
             this.NumberText.Text = "Numbers";
             // 
+            // Percentage_Button
+            // 
+            this.Percentage_Button.Font = new System.Drawing.Font("新細明體", 36F);
+            this.Percentage_Button.Location = new System.Drawing.Point(25, 260);
+            this.Percentage_Button.Name = "Percentage_Button";
+            this.Percentage_Button.Size = new System.Drawing.Size(92, 104);
+            this.Percentage_Button.TabIndex = 19;
+            this.Percentage_Button.Text = "%";
+            this.Percentage_Button.UseVisualStyleBackColor = true;
+            this.Percentage_Button.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Percentage_Button_MouseClick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(529, 389);
+            this.Controls.Add(this.Percentage_Button);
             this.Controls.Add(this.NumberText);
             this.Controls.Add(this.TxBox_Calculator);
-            this.Controls.Add(this.button17);
+            this.Controls.Add(this.AC_Btn);
             this.Controls.Add(this.Divide_button);
             this.Controls.Add(this.Multiply_button);
             this.Controls.Add(this.Reduce_button);
@@ -303,9 +317,10 @@ namespace CalculatorApp
         private System.Windows.Forms.Button Reduce_button;
         private System.Windows.Forms.Button Multiply_button;
         private System.Windows.Forms.Button Divide_button;
-        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button AC_Btn;
         private System.Windows.Forms.TextBox TxBox_Calculator;
         private System.Windows.Forms.Label NumberText;
+        private System.Windows.Forms.Button Percentage_Button;
     }
 }
 

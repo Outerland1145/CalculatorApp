@@ -182,5 +182,14 @@ namespace CalculatorApp
             }
                 
         }
+
+        private void AC_Btn_MouseClick(object sender, MouseEventArgs e)
+        {
+            TxBox_Calculator.Text = "";
+            NumberText.Text = "";
+            FirstNumber = 0f;
+            SecondNumber = 0f;
+            operators = -1;
+        }
     }
 }

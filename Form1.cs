@@ -22,95 +22,61 @@ namespace CalculatorApp
             InitializeComponent();
             NumberText.Text = "";
         }
+        private void Add_Number(string Use_number)
+        {
+            if (TxBox_Calculator.Text == "0")
+                TxBox_Calculator.Text = "";
+            TxBox_Calculator.Text = TxBox_Calculator.Text + Use_number;
+        }
 
         private void Btn_1_Click(object sender, EventArgs e)
         {
-            if (TxBox_Calculator.Text == "0")
-            {
-                TxBox_Calculator.Text = ""; //這個簡單的判斷式，會預先檢查輸入文字框是不是只有一個「0」？是的話，就先清除掉裡面的數字內容
-            }
-            TxBox_Calculator.Text = TxBox_Calculator.Text + "1";
+            Add_Number("1");
         }
 
         private void Btn_2_Click(object sender, EventArgs e)
         {
-            if (TxBox_Calculator.Text == "0")
-            {
-                TxBox_Calculator.Text = ""; //這個簡單的判斷式，會預先檢查輸入文字框是不是只有一個「0」？是的話，就先清除掉裡面的數字內容
-            }
-            TxBox_Calculator.Text = TxBox_Calculator.Text + "2";
+            Add_Number("2");
         }
 
         private void Btn_3_Click(object sender, EventArgs e)
         {
-            if (TxBox_Calculator.Text == "0")
-            {
-                TxBox_Calculator.Text = ""; //這個簡單的判斷式，會預先檢查輸入文字框是不是只有一個「0」？是的話，就先清除掉裡面的數字內容
-            }
-            TxBox_Calculator.Text = TxBox_Calculator.Text + "3";
+            Add_Number("3");
         }
 
         private void Btn_4_Click(object sender, EventArgs e)
         {
-            if (TxBox_Calculator.Text == "0")
-            {
-                TxBox_Calculator.Text = ""; //這個簡單的判斷式，會預先檢查輸入文字框是不是只有一個「0」？是的話，就先清除掉裡面的數字內容
-            }
-            TxBox_Calculator.Text = TxBox_Calculator.Text + "4";
+            Add_Number("4");
         }
 
         private void Btn_5_Click(object sender, EventArgs e)
         {
-            if (TxBox_Calculator.Text == "0")
-            {
-                TxBox_Calculator.Text = ""; //這個簡單的判斷式，會預先檢查輸入文字框是不是只有一個「0」？是的話，就先清除掉裡面的數字內容
-            }
-            TxBox_Calculator.Text = TxBox_Calculator.Text + "5";
+            Add_Number("5");
         }
 
         private void Btn_6_Click(object sender, EventArgs e)
         {
-            if (TxBox_Calculator.Text == "0")
-            {
-                TxBox_Calculator.Text = ""; //這個簡單的判斷式，會預先檢查輸入文字框是不是只有一個「0」？是的話，就先清除掉裡面的數字內容
-            }
-            TxBox_Calculator.Text = TxBox_Calculator.Text + "6";
+            Add_Number("6");
         }
 
         private void Btn_7_Click(object sender, EventArgs e)
         {
-            if (TxBox_Calculator.Text == "0")
-            {
-                TxBox_Calculator.Text = ""; //這個簡單的判斷式，會預先檢查輸入文字框是不是只有一個「0」？是的話，就先清除掉裡面的數字內容
-            }
-            TxBox_Calculator.Text = TxBox_Calculator.Text + "7";
+            Add_Number("7");
         }
 
         private void Btn_8_Click(object sender, EventArgs e)
         {
-            if (TxBox_Calculator.Text == "0")
-            {
-                TxBox_Calculator.Text = ""; //這個簡單的判斷式，會預先檢查輸入文字框是不是只有一個「0」？是的話，就先清除掉裡面的數字內容
-            }
-            TxBox_Calculator.Text = TxBox_Calculator.Text + "8";
+            Add_Number("8");
         }
 
         private void Btn_9_Click(object sender, EventArgs e)
         {
-            if (TxBox_Calculator.Text == "0")
-            {
-                TxBox_Calculator.Text = ""; //這個簡單的判斷式，會預先檢查輸入文字框是不是只有一個「0」？是的話，就先清除掉裡面的數字內容
-            }
-            TxBox_Calculator.Text = TxBox_Calculator.Text + "9";
+            Add_Number("9");
         }
 
         private void Btn_0_Click(object sender, EventArgs e)
         {
-            if (TxBox_Calculator.Text == "0")
-            {
-                TxBox_Calculator.Text = ""; //這個簡單的判斷式，會預先檢查輸入文字框是不是只有一個「0」？是的話，就先清除掉裡面的數字內容
-            }
-            TxBox_Calculator.Text = TxBox_Calculator.Text + "0";
+            Add_Number("0");
         }
 
         private void Divide_button_MouseClick(object sender, MouseEventArgs e)
@@ -185,11 +151,24 @@ namespace CalculatorApp
 
         private void AC_Btn_MouseClick(object sender, MouseEventArgs e)
         {
-            TxBox_Calculator.Text = "";
+            TxBox_Calculator.Text = "0";
             NumberText.Text = "";
             FirstNumber = 0f;
             SecondNumber = 0f;
             operators = -1;
+        }
+
+        private void Percentage_Button_MouseClick(object sender, MouseEventArgs e)
+        {
+        }
+
+        private void BackSpace_Btn_MouseClick(object sender, MouseEventArgs e)
+        {
+            
+            string number = TxBox_Calculator.Text;
+            int numberLen = number.Length-1;
+            number.Substring(0, numberLen);
+            TxBox_Calculator.Text = number;
         }
     }
 }

@@ -16,7 +16,9 @@ namespace CalculatorApp
         double douOutput;
         double FirstNumber;
         double SecondNumber;
-        int operators;
+        //int operators;
+        Calculate calculate = new Calculate(); // 建立計算機物件
+        int operators = -1;
         public Form1()
         {
             InitializeComponent();
@@ -25,8 +27,18 @@ namespace CalculatorApp
         private void Add_Number(string Use_number)
         {
             if (TxBox_Calculator.Text == "0")
+            { 
                 TxBox_Calculator.Text = "";
+            }
+                
             TxBox_Calculator.Text = TxBox_Calculator.Text + Use_number;
+        }
+        private void Select_Operator(int _operator)
+        {
+            calculate.firstNumber = Convert.ToSingle(TxBox_Calculator.Text);//將輸入文字框轉換成浮點數，再將數字存到計算機物件的firstNumber屬性裡面
+            NumberText.Text = TxBox_Calculator.Text;
+            operators = _operator;
+            TxBox_Calculator.Text = "0"; //重新將輸入文字框重新設定為0
         }
 
         private void Btn_1_Click(object sender, EventArgs e)
@@ -81,62 +93,50 @@ namespace CalculatorApp
 
         private void Divide_button_MouseClick(object sender, MouseEventArgs e)
         {
-            FirstNumber = Convert.ToSingle(TxBox_Calculator.Text);
-            NumberText.Text = TxBox_Calculator.Text + "/";
-            TxBox_Calculator.Text = "";
-            operators = 4;
+            Select_Operator(3);
         }
 
         private void Multiply_button_MouseClick(object sender, MouseEventArgs e)
         {
-            FirstNumber = Convert.ToSingle(TxBox_Calculator.Text);
-            NumberText.Text = TxBox_Calculator.Text + "*";
-            TxBox_Calculator.Text = "";
-            operators = 3;
+            Select_Operator(2);
         }
 
         private void Reduce_button_MouseClick(object sender, MouseEventArgs e)
         {
-            FirstNumber = Convert.ToSingle(TxBox_Calculator.Text);
-            NumberText.Text = TxBox_Calculator.Text + "-";
-            TxBox_Calculator.Text = "";
-            operators = 2;
+            Select_Operator(1);
         }
 
         private void Add_button_MouseClick(object sender, MouseEventArgs e)
         {
-            FirstNumber = Convert.ToSingle(TxBox_Calculator.Text);
-            NumberText.Text = TxBox_Calculator.Text + "+";
-            TxBox_Calculator.Text = "";
-            operators = 1;
+            Select_Operator(0);
 
 
         }
 
         private void Equal_Button_MouseClick(object sender, MouseEventArgs e)
         {
-            double finalResults = 0f;
-            SecondNumber = Convert.ToSingle(TxBox_Calculator.Text);
-            switch (operators)
+        double finalResults = 0f;
+        calculate.secondNumber = Convert.ToSingle(TxBox_Calculator.Text);
+        switch (operators)
             {
-                case 1:
-                    finalResults = FirstNumber + SecondNumber;
-                    break;
-                case 2:
-                    finalResults = FirstNumber - SecondNumber;
-                    break;
-                case 3:
-                    finalResults = FirstNumber * SecondNumber;
-                    break;
-                case 4:
-                    finalResults = FirstNumber / SecondNumber;
-                    break;
+            case 0:
+                finalResults = calculate.Add();;
+                break;
+            case 1:
+                finalResults = calculate.Subtract();
+                break;
+            case 2:
+                finalResults = calculate.Multiply();
+                break;
+            case 3:
+                finalResults = calculate.Divide();
+                break;
             }
-            TxBox_Calculator.Text = string.Format("{0:0.##########}", finalResults);
-            NumberText.Text = "";
-            FirstNumber = 0f;
-            SecondNumber = 0f;
-            operators = -1;
+        TxBox_Calculator.Text = string.Format("{0:0.##########}", finalResults);
+        NumberText.Text = "";
+        FirstNumber = 0f;
+        SecondNumber = 0f;
+        operators = -1;
 
         }
 

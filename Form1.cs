@@ -16,7 +16,7 @@ namespace CalculatorApp
         double douOutput;
         double FirstNumber;
         double SecondNumber;
-        //int operators;
+        Boolean percentage = false;
         Calculate calculate = new Calculate(); // 建立計算機物件
         int operators = -1;
         public Form1()
@@ -160,6 +160,20 @@ namespace CalculatorApp
 
         private void Percentage_Button_MouseClick(object sender, MouseEventArgs e)
         {
+            string text = TxBox_Calculator.Text;
+
+            if (double.TryParse(text, out double number))
+            {
+                // 計算百分比
+                double percentValue = number / 100;
+
+                // 顯示結果
+                TxBox_Calculator.Text = percentValue.ToString();
+            }
+            else
+            {
+                TxBox_Calculator.Clear();
+            }
         }
 
         private void BackSpace_Btn_MouseClick(object sender, MouseEventArgs e)

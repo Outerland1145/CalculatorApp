@@ -164,11 +164,15 @@ namespace CalculatorApp
 
         private void BackSpace_Btn_MouseClick(object sender, MouseEventArgs e)
         {
-            
-            string number = TxBox_Calculator.Text;
-            int numberLen = number.Length-1;
-            number.Substring(0, numberLen);
-            TxBox_Calculator.Text = number;
+
+            string Calculator = TxBox_Calculator.Text;
+            if (Calculator.Length > 0)
+            {
+                int numberLen = Calculator.Length - 1;
+                Calculator = Calculator.Substring(0, numberLen);
+                TxBox_Calculator.Text = Calculator;
+            }
+
         }
     }
 }
